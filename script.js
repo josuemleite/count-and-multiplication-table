@@ -14,6 +14,7 @@ function count() {
   ) {
     res.innerHTML = 'Data is missing. Try again!'
     res.style.color = 'rgb(128, 0, 32)'
+    button.disabled = false
   } else {
     let i = Number(start.value)
     let j = Number(end.value)
@@ -50,4 +51,28 @@ function count() {
       }, 100)
     }
   }
+}
+
+function multTable() {
+  let num = document.getElementById('txtNumber')
+  let res = document.getElementById('result')
+
+  if (num.value.length == 0) {
+    res.innerHTML = 'Please type a number!'
+    res.style.color = 'rgb(128, 0, 32)'
+  } else {
+    let n = Number(num.value)
+    let factor = 1
+    res.innerHTML = ''
+    res.style.color = 'inherit'
+    while (factor <= 10) {
+      res.innerHTML += `${n} x ${factor} = ${n * factor}` + '<br>'
+      factor++
+    }
+  }
+}
+
+function clearResult() {
+  let res = document.getElementById('result')
+  res.innerHTML = ''
 }

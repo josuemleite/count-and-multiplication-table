@@ -8,27 +8,44 @@
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
 
-    <title>Let's count</title>
+    <title>Fun Numbers</title>
   </head>
   <body>
-    <header>
-      <h1>Let's count</h1>
-    </header>
-    <section>
-      <div id="data">
-        <p>Start: <input type="number" name="start" id="txtStart" /></p>
-        <p>End: <input type="number" name="end" id="txtEnd" /></p>
-        <p>Step: <input type="number" name="step" id="txtStep" /></p>
-        <p>
-          <input
-            type="button"
-            value="Count"
-            onclick="count(); this.disabled = true;"
-          />
-        </p>
-      </div>
-      <div id="res">Preparing the count...</div>
-    </section>
+    <div>
+      <header>
+        <h1>Let's count</h1>
+      </header>
+      <section>
+        <div id="data">
+          <p>Start: <input type="number" name="start" id="txtStart" /></p>
+          <p>End: <input type="number" name="end" id="txtEnd" /></p>
+          <p>Step: <input type="number" name="step" id="txtStep" /></p>
+          <p>
+            <input type="button" value="Count" onclick="count()" />
+          </p>
+        </div>
+        <div id="res">Preparing the count...</div>
+      </section>
+    </div>
+    <div>
+      <header>
+        <h1>Multiplication Table</h1>
+      </header>
+      <section>
+        <div>
+          <p>
+            Number: <input type="number" name="num" id="txtNumber" />
+            <input
+              type="button"
+              value="Generate Mult. Table"
+              onclick="multTable()"
+            />
+            <input type="button" value="Clear" onclick="clearResult()" />
+          </p>
+        </div>
+        <div id="result"></div>
+      </section>
+    </div>
     <footer>
       <p>
         &copy;
