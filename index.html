@@ -19,7 +19,13 @@
         <p>Start: <input type="number" name="start" id="txtStart" /></p>
         <p>End: <input type="number" name="end" id="txtEnd" /></p>
         <p>Step: <input type="number" name="step" id="txtStep" /></p>
-        <p><input type="button" value="Count" onclick="count()" /></p>
+        <p>
+          <input
+            type="button"
+            value="Count"
+            onclick="count(); this.disabled = true;"
+          />
+        </p>
       </div>
       <div id="res">Preparing the count...</div>
     </section>

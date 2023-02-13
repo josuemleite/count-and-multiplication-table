@@ -1,4 +1,7 @@
 function count() {
+  var button = document.querySelector('input[type="button"]')
+  button.disabled = true
+
   let start = document.getElementById('txtStart')
   let end = document.getElementById('txtEnd')
   let step = document.getElementById('txtStep')
@@ -28,6 +31,7 @@ function count() {
       const intervalId = setInterval(() => {
         if (a > j) {
           clearInterval(intervalId)
+          button.disabled = false
           return
         }
         res.innerHTML += `${a} `
@@ -38,6 +42,7 @@ function count() {
       const intervalId = setInterval(() => {
         if (a < j) {
           clearInterval(intervalId)
+          button.disabled = false
           return
         }
         res.innerHTML += `${a} `
